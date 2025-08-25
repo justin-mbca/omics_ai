@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
-from app.utils.data_loader import load_data
-from app.analysis.data_summary import summarize_data
-from app.visualization.plots import plot_scatter, plot_heatmap
-from app.ml.clustering import run_kmeans
+from utils.data_loader import load_data
+from analysis.data_summary import summarize_data
+from visualization.plots import plot_scatter, plot_heatmap
+from ml.clustering import run_kmeans
 
 st.title("Omics Dashboard (Modularized)")
 
