@@ -1,6 +1,36 @@
+[//]: # (Omics Domain Documentation)
+
+## Omics Domain Background
+
+**Omics** refers to fields of study in biology ending with -omics, such as genomics (study of genomes), transcriptomics (study of RNA transcripts), proteomics (study of proteins), and metabolomics (study of metabolites). Multi-omics integrates data from these domains to provide a comprehensive view of biological systems.
+
+### Common Omics Data Types
+- **Genomics:** DNA sequence data, gene variants, SNPs
+- **Transcriptomics:** Gene expression matrices (e.g., RNA-Seq counts)
+- **Proteomics:** Protein abundance tables, mass spectrometry data
+- **Metabolomics:** Metabolite concentration tables
+
+### Example Data Format
+Most omics data are provided as tabular files (CSV, TSV, Excel) with rows as features (genes, proteins, etc.) and columns as samples or conditions.
+
+**Example (transcriptomics):**
+
+| Gene   | Sample1 | Sample2 | Sample3 |
+|--------|---------|---------|---------|
+| TP53   |  120    |  130    |  110    |
+| BRCA1  |   80    |   95    |   90    |
+
+### Resources
+- [Introduction to Omics Technologies (NCBI)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6466120/)
+- [Multi-omics Data Integration (Nature)](https://www.nature.com/articles/s41576-018-0017-8)
+
 # Omics Dashboard
 
 A prototype Streamlit app for multi-omics data visualization and exploration.
+
+## Live Demo
+
+[Access the Omics Dashboard App](https://omicsai-7rgjwvbvvavkrqefyvn5af.streamlit.app)
 
 ## Project Information
 
