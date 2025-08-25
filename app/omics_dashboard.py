@@ -5,7 +5,7 @@ from app.analysis.data_summary import summarize_data
 from app.visualization.plots import plot_scatter, plot_heatmap
 from app.ml.clustering import run_kmeans
 
-st.title("Omics Demo Dashboard (Modularized)")
+st.title("Omics Dashboard (Modularized)")
 
 st.write("Upload a public or anonymized omics dataset to explore analysis, visualization, and ML features.")
 
