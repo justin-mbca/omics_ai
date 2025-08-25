@@ -30,7 +30,7 @@ A prototype Streamlit app for multi-omics data visualization and exploration.
 
 ## Live Demo
 
-[Access the Omics Dashboard App](https://omicsai-7rgjwvbvvavkrqefyvn5af.streamlit.app)
+[Access the Omics Dashboard App](https://omicsai.streamlit.app)
 
 ## Project Information
 
