@@ -106,13 +106,13 @@ with tab1:
         # Export/Reporting
         st.markdown("### Export & Reporting")
         st.help("Download your results and plots. Automated report generation coming soon.")
-        st.download_button("Download Data (CSV)", df.to_csv(index=False).encode(), file_name="omics_results.csv")
+        st.download_button("Download Data (CSV)", df.to_csv(index=False).encode(), file_name="omics_results.csv", key="download_csv_main")
         # (Optional) Add plot export and PDF/HTML report in future
 
         # Export/Reporting
         st.markdown("### Export & Reporting")
         st.help("Download your results and plots. Automated report generation coming soon.")
-        st.download_button("Download Data (CSV)", df.to_csv(index=False).encode(), file_name="omics_results.csv")
+        st.download_button("Download Data (CSV)", df.to_csv(index=False).encode(), file_name="omics_results.csv", key="download_csv_secondary")
         # (Optional) Add plot export and PDF/HTML report in future
 
 
