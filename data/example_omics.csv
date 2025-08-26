@@ -1,0 +1,6 @@
+Sample,GeneA,GeneB,GeneC,Group
+Sample_1,10,20,30,Control
+Sample_2,12,18,29,Control
+Sample_3,15,22,31,Treatment
+Sample_4,14,19,28,Treatment
+Sample_5,13,21,32,Control
