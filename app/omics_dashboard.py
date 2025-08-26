@@ -62,6 +62,7 @@ with tab1:
         else:
             st.info("No suitable label column found for classification (should be categorical with <=10 unique values).")
 
+
         # Feature Selection
         st.write("Feature Selection:")
         if label_options:
@@ -70,6 +71,19 @@ with tab1:
             select_top_features(df, label_col_fs, k)
         else:
             st.info("No suitable label column found for feature selection.")
+
+        # LLM Demo/Placeholder
+        st.markdown("---")
+        st.subheader("AI-Powered Summary & Q&A (Demo)")
+        st.info("This is a placeholder for LLM-powered features. Connect your own API key to enable real-time summaries and Q&A.")
+        if st.button("Generate Summary (Demo)"):
+            st.success("""
+**Summary:**
+This dataset contains {0} samples and {1} features. The main clusters and patterns have been visualized above. For a full natural language summary, connect an LLM API.
+            """.format(df.shape[0], df.shape[1]))
+        user_question = st.text_input("Ask a question about your data (Demo)")
+        if user_question:
+            st.info("LLM Answer: This is a demo response. Connect an LLM API for real answers to: '{}'".format(user_question))
 
 with tab2:
     render_demo_tab()
