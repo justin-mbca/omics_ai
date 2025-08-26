@@ -32,7 +32,41 @@ A prototype Streamlit app for multi-omics data visualization and exploration.
 
 [Access the Omics Dashboard App](https://omicsai.streamlit.app)
 
-## Project Information
+
+## Analysis & Methods
+
+The Omics Dashboard provides the following analyses and methods:
+
+### 1. Data Upload & Preview
+- Upload CSV/TSV files containing omics data (samples as rows, features as columns).
+- Preview the uploaded data and view summary statistics.
+
+### 2. Quality Control
+- View basic quality metrics (summary statistics, missing values).
+- Visualize feature correlations with a heatmap.
+- Outlier detection (planned).
+
+### 3. Exploratory Data Analysis
+- **PCA (Principal Component Analysis):** Visualize sample clustering and variance structure in 2D.
+- **Scatter Plot:** Interactive scatter plot for any two features.
+- **Heatmap:** Correlation heatmap of numeric features.
+
+### 4. Clustering (Unsupervised Learning)
+- **KMeans Clustering:** Group samples into clusters based on feature similarity.
+- Adjustable number of clusters.
+
+### 5. Classification (Supervised Learning)
+- **Random Forest Classifier:** Predict sample classes (e.g., disease/control) using selected features.
+- Shows accuracy, confusion matrix, and ROC AUC (for binary classification).
+
+### 6. Feature Selection
+- **SelectKBest (ANOVA F-test):** Identify top features most associated with the selected label/class.
+- View and download top features and their scores.
+
+### 7. Demo Tab
+- Explore a rich, multi-tabbed demo with synthetic data, including advanced visualizations (PCA, heatmap, protein structure, pathway analysis, etc.).
+
+---
 
 **Project Name:** Omics Dashboard  
 **Description:**  

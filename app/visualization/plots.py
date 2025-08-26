@@ -6,6 +6,6 @@ def plot_scatter(df: pd.DataFrame, x: str, y: str):
     fig = px.scatter(df, x=x, y=y)
     st.plotly_chart(fig)
 
-def plot_heatmap(df: pd.DataFrame):
+def plot_heatmap(df: pd.DataFrame, key=None):
     fig = px.imshow(df.corr())
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, key=key)

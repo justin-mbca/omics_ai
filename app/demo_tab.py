@@ -27,7 +27,7 @@ def render_demo_tab():
         with col1:
             st.subheader("Gene Expression Heatmap")
             fig_heatmap = px.imshow(expression_data, labels=dict(x="Genes", y="Samples", color="Expression"), x=genes, y=samples)
-            st.plotly_chart(fig_heatmap, use_container_width=True)
+            st.plotly_chart(fig_heatmap, use_container_width=True, key="demo_heatmap")
             st.subheader("Variant Distribution")
             fig_variant = px.bar(variant_df.sum(), labels=dict(index="Variant", value="Count", color="Variant"))
             st.plotly_chart(fig_variant, use_container_width=True)
@@ -62,7 +62,7 @@ def render_demo_tab():
         with col2:
             st.subheader("Quality Metrics Correlation")
             fig_qc_corr = px.imshow(qc_metrics.select_dtypes(include=np.number).corr())
-            st.plotly_chart(fig_qc_corr, use_container_width=True)
+            st.plotly_chart(fig_qc_corr, use_container_width=True, key="demo_qc_corr")
             st.subheader("Outlier Detection")
             outlier_scores = np.random.beta(1, 10, 20)
             outlier_df = pd.DataFrame({'Sample': samples, 'Outlier Score': outlier_scores})
@@ -88,7 +88,7 @@ def render_demo_tab():
         with col2:
             st.subheader("Factor Weights Heatmap")
             fig_factor_heatmap = px.imshow(factor_loadings, labels=dict(x="Factor", y="Gene", color="Weight"), x=[f'Factor_{i+1}' for i in range(factors)], y=genes)
-            st.plotly_chart(fig_factor_heatmap, use_container_width=True)
+            st.plotly_chart(fig_factor_heatmap, use_container_width=True, key="demo_factor_heatmap")
             st.subheader("Pathway Enrichment")
             pathways = ['Cell Cycle', 'DNA Repair', 'Metabolism', 'Immune Response', 'Apoptosis']
             enrichment_scores = -np.log10(np.random.uniform(0.001, 0.1, len(pathways)))
