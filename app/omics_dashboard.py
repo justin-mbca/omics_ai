@@ -1,12 +1,12 @@
 import streamlit as st
-from app.utils.data_loader import load_data
-from app.analysis.data_summary import summarize_data
-from app.analysis.pca_quality import show_quality_metrics, show_pca
-from app.visualization.plots import plot_scatter, plot_heatmap
-from app.ml.clustering import run_kmeans
-from app.ml.classification import run_classification
-from app.ml.feature_selection import select_top_features
-from app.demo_tab import render_demo_tab
+from utils.data_loader import load_data
+from analysis.data_summary import summarize_data
+from analysis.pca_quality import show_quality_metrics, show_pca
+from visualization.plots import plot_scatter, plot_heatmap
+from ml.clustering import run_kmeans
+from ml.classification import run_classification
+from ml.feature_selection import select_top_features
+from demo_tab import render_demo_tab
 
 
 st.set_page_config(page_title="Omics Dashboard", layout="wide")
