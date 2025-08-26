@@ -82,12 +82,40 @@ A prototype Streamlit app for visualizing and exploring multi-omics data. The da
 
 ```mermaid
 flowchart TD
-   A[User opens app in browser] --> B[Uploads omics data file]
-   B --> C[Data is loaded and processed]
-   C --> D[User selects analysis/visualization options]
-   D --> E[Streamlit generates interactive plots]
-   E --> F[User explores and downloads results]
+   subgraph User
+      A[User]
+   end
+   subgraph Web Browser
+      B[Streamlit UI]
+   end
+   subgraph Backend
+      C[Data Loader]
+      D[Analysis & ML Modules]
+      E[Visualization Engine]
+      F[Export/Reporting]
+   end
+   subgraph Data
+      G[Omics Data (CSV/TSV)]
+      H[Example Data]
+   end
+   A -->|Uploads file| B
+   B -->|Sends file| C
+   C -->|Loads/validates| D
+   D -->|Runs analysis| E
+   E -->|Generates plots| B
+   D -->|Results| F
+   F -->|Download| B
+   G -->|User upload| C
+   H -->|Download example| B
 ```
+
+---
+
+**More Technical Diagrams:**
+- [Modular Architecture & Data Flow (Mermaid)](docs/technical_diagrams.md)
+- [User Journey & System Interactions (PlantUML)](docs/technical_diagrams.md)
+
+For additional diagrams and documentation, see the `/docs` folder (planned).
 
 ## How to Run This Prototype
 
